@@ -1,5 +1,5 @@
 # Project for thw course Database Systems
-![Alt text](docs/ER Diagrams.png)
+![Alt text](/docs/ER%20Diagram.png)
 
 ## Setup Instructions
 To set up the project locally with Oracle SQL*Plus:
