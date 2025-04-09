@@ -7,8 +7,8 @@
 To set up the project locally with Oracle SQL*Plus:
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/NovaPharmacyDB.git
-   cd NovaPharmacyDB
+   git clone https://github.com/byte-banditt/DBS-Project.git
+   cd DBS-Project
 
 2. **Install Oracle Database Locally**:
 
@@ -36,7 +36,3 @@ To set up the project locally with Oracle SQL*Plus:
     @schema/constraints.sql
     @schema/triggers.sql
     @data/initial_data.sql
-
- 
-
-    
