@@ -20,3 +20,23 @@ To set up the project locally with Oracle SQL*Plus:
     ```bash
     sqlplus -v
     
+3. **Create New User**:
+
+    ```bash
+    sqlplus
+    CREATE USER nova_user IDENTIFIED BY password DEFAULT TABLESPACE users QUOTA UNLIMITED ON users GRANT CONNECT, RESOURCE TO nova_user;
+
+4. **Open Terminal in Cloned Repository**:
+
+    Open sqlplus and connect to nova_user
+
+    Execute the following instructions:
+    ```bash
+    @schema/tables.sql
+    @schema/constraints.sql
+    @schema/triggers.sql
+    @data/initial_data.sql
+
+ 
+
+    
