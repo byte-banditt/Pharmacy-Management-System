@@ -1,4 +1,5 @@
-# DBS-Project
+# Project for thw course Database Systems
+![Alt text](docs/ER Diagrams.png)
 
 ## Setup Instructions
 To set up the project locally with Oracle SQL*Plus:
