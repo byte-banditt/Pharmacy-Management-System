@@ -1,0 +1,50 @@
+# Database files
+*.db
+*.sqlite3
+*.mdf
+*.ldf
+*.ibd
+*.frm
+*.dmp
+
+# Database dumps and backups
+dump.sql
+backup*.sql
+export*.sql
+*.bak
+
+# Configuration files with sensitive data
+config.ini
+my.cnf
+*.env
+connection.json
+credentials.json
+
+# Temporary files and logs
+*.log
+*.tmp
+*.temp
+*.swp
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Documentation tool outputs
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.toc
+
+# Miscellaneous
+test.sql
+scratch.sql
+local.sql
