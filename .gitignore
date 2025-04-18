@@ -48,3 +48,4 @@ Thumbs.db
 test.sql
 scratch.sql
 local.sql
+dropTables.sql
