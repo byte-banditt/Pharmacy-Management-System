@@ -37,5 +37,5 @@ To set up the project locally with Oracle SQL*Plus:
     @schema/tables.sql
     @schema/constraints.sql
     @schema/triggers.sql
-    @data/initial_data.sql
+    @procedures/createProcedures.sql
     
