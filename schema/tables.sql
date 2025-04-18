@@ -48,7 +48,7 @@ CREATE TABLE Prescription (
     PrescriptionID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     DoctorID VARCHAR2(12),
     PatientID VARCHAR2(12),
-    Date NUMBER --DATE DEFAULT SYSDATE,Don't know the working so commented
+    Date_of_pres NUMBER 
 );
 
 -- Prescription_Drug Table (for multiple drugs per prescription)

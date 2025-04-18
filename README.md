@@ -12,7 +12,7 @@ To set up the project locally with Oracle SQL*Plus:
 
 2. **Install Oracle Database Locally**:
 
-    Download and install [Oracle Database Express Edition](https://www.oracle.com/database/technologies/oracle21c-windows-downloads.html) on your machine.
+    Download and install [Oracle Database Express Edition](https://www.oracle.com/in/database/technologies/xe-downloads.html) on your machine.
 
     Follow the installation instructions for your OS (e.g., Windows installer or Linux RPM).
 
@@ -24,7 +24,9 @@ To set up the project locally with Oracle SQL*Plus:
 
     ```bash
     sqlplus
-    CREATE USER nova_user IDENTIFIED BY password DEFAULT TABLESPACE users QUOTA UNLIMITED ON users GRANT CONNECT, RESOURCE TO nova_user;
+    CREATE USER nova IDENTIFIED BY password; 
+    GRANT CONNECT, RESOURCE TO nova;
+    ALTER USER nova QUOTA UNLIMITED ON USERS;
 
 4. **Open Terminal in Cloned Repository**:
 
@@ -36,3 +38,4 @@ To set up the project locally with Oracle SQL*Plus:
     @schema/constraints.sql
     @schema/triggers.sql
     @data/initial_data.sql
+    
