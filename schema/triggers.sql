@@ -11,22 +11,24 @@ END;
 
 -- 2. Pharmacy Drug Minimum Enforcement (Simplified)
 CREATE OR REPLACE TRIGGER trg_min_drugs_per_pharmacy
-AFTER INSERT OR UPDATE ON Drug_Sale
+AFTER DELETE OR UPDATE ON Drug_Sale
 DECLARE
-    v_bad_pharmacy NUMBER;
+    v_pharmacy_id VARCHAR2(100);
+    v_count       NUMBER;
 BEGIN
-    SELECT PharmacyID INTO v_bad_pharmacy
-    FROM Drug_Sale
-    GROUP BY PharmacyID
-    HAVING COUNT(DISTINCT Trade_Name) < 10
-    FETCH FIRST 1 ROW ONLY;
-
-    IF v_bad_pharmacy IS NOT NULL THEN
-        RAISE_APPLICATION_ERROR(-20001, 
-            'Pharmacy ' || v_bad_pharmacy || ' has less than 10 unique drugs');
-    END IF;
+    FOR rec IN (
+        SELECT PharmacyID, COUNT(DISTINCT Trade_Name) AS drug_count
+        FROM Drug_Sale
+        GROUP BY PharmacyID
+        HAVING COUNT(DISTINCT Trade_Name) < 10
+    ) LOOP
+        RAISE_APPLICATION_ERROR(-20001,
+            'Pharmacy ' || rec.PharmacyID || ' has less than 10 unique drugs');
+    END LOOP;
 END;
 /
+
+
 
 -- 3. Doctor Patient Minimum Enforcement (Simplified)
 -- CREATE OR REPLACE TRIGGER trg_min_patients_per_doctor
