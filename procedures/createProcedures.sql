@@ -15,4 +15,5 @@
 @procedures/patientList.sql;
 @procedures/printPresWithDate.sql;
 @procedures/stock.sql;
+@procedures/addContract.sql
 

@@ -39,7 +39,7 @@ ALTER TABLE Prescription_Drug
 -- Foreign keys for Drug_Sale
 ALTER TABLE Drug_Sale
     ADD CONSTRAINT drugsale_pharmacy_fk 
-    FOREIGN KEY (PharmacyID) REFERENCES Pharmacy(PharmacyID)
+    FOREIGN KEY (PharmacyID) REFERENCES Pharmacy(Name)
     ON DELETE CASCADE;
 
 ALTER TABLE Drug_Sale
@@ -58,7 +58,7 @@ ALTER TABLE Contract
 ALTER TABLE Contract
     ADD CONSTRAINT contract_pharmacy_fk 
     FOREIGN KEY (PharmacyID) 
-    REFERENCES Pharmacy(PharmacyID)
+    REFERENCES Pharmacy(Name)
     ON DELETE CASCADE;
 
 -- Unique constraint for latest prescription

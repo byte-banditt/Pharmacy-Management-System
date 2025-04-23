@@ -23,8 +23,8 @@ CREATE TABLE Doctor (
 
 -- Pharmacy Table
 CREATE TABLE Pharmacy (
-    PharmacyID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    Name VARCHAR2(100) NOT NULL,
+    --PharmacyID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    Name VARCHAR2(100) PRIMARY KEY,
     Address VARCHAR2(200) NOT NULL,
     Phone NUMBER
 );
@@ -64,7 +64,7 @@ CREATE TABLE Prescription_Drug (
 
 -- Drug_Sale Table (for pharmacy-drug relationship with price)
 CREATE TABLE Drug_Sale (
-    PharmacyID NUMBER,
+    PharmacyID VARCHAR2(100),
     Trade_Name VARCHAR2(100),
     Company_Name VARCHAR2(100),
     Price NUMBER(10,2) CHECK (Price >= 0),
@@ -74,7 +74,7 @@ CREATE TABLE Drug_Sale (
 -- Contract Table
 CREATE TABLE Contract (
     Company_Name VARCHAR2(100),
-    PharmacyID NUMBER,
+    PharmacyID VARCHAR2(100),
     Start_Date DATE,
     End_Date DATE,
     Contract_Content VARCHAR2(4000),

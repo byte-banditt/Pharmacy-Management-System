@@ -10,7 +10,7 @@ AddPharmacy(Name,Address,Phone)
 
 AddPrescription(DoctorID,PatientID,TO_DATE('Date_of_pres','DD/MM/YYYY') , :presc_id)
 
-ContractDetails(PharmacyID,Company_Name)
+ContractDetails(Pharmacy_name,Company_Name)
 
 DrugsByCompany(Company_Name)
 
