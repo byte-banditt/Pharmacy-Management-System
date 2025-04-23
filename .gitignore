@@ -49,3 +49,10 @@ test.sql
 scratch.sql
 local.sql
 dropTables.sql
+
+# Java related 
+*.class
+*.jar
+*.war
+*.ear
+*.nar
