@@ -1,5 +1,5 @@
 CREATE OR REPLACE PROCEDURE ContractDetails(
-    p_pharmacyid    IN NUMBER,
+    p_pharmacy_name    IN NUMBER,
     p_company_name  IN VARCHAR2,
     p_result        OUT SYS_REFCURSOR
 ) AS

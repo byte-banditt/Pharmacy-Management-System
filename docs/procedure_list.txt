@@ -1,0 +1,28 @@
+AddCompany(name ,phone) -- Add Pharmaceutical_Company in table
+
+AddDoctor(AadharID,Name,Specialty,Years_of_Experience) -- Add Doctor
+
+AddDrug(Trade_Name,Company_Name,Formula)
+
+AddPatient(AadharID,Name,Address,Age,primary_doctor_ID)
+
+AddPharmacy(Name,Address,Phone)
+
+AddPrescription(DoctorID,PatientID,TO_DATE('Date_of_pres','DD/MM/YYYY') , :presc_id)
+
+ContractDetails(PharmacyID,Company_Name)
+
+DrugsByCompany(Company_Name)
+
+AddPrescriptionDrug(PrescriptionID,Trade_Name,Company_Name,Quantity)
+
+PrescriptionReport(PrescriptionID,Start_Date,End_Date)
+
+PatientListForDoctor(DoctorID)
+
+PrescriptionDetails(PatientID,Date_of_pres)
+
+StockPosition(PharmacyID)
+
+DeletePharmaCompany(Company_Name)
+

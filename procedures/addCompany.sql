@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE AddCompany(
     p_name      IN VARCHAR2,
-    p_phone     IN VARCHAR2
+    p_phone     IN INT
 ) AS
 BEGIN
     INSERT INTO Pharmaceutical_Company (Name, Phone)

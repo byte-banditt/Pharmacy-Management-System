@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE PrescriptionDetails(
-    p_patientid     IN VARCHAR2,
-    p_date          IN NUMBER,
+    p_patientid     IN NUMBER,
+    p_date          IN DATE,
     p_result        OUT SYS_REFCURSOR
 ) AS
 BEGIN

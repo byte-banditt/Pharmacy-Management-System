@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE PrescriptionsReport(
-    p_patientid     IN VARCHAR2,
-    p_start_date    IN NUMBER,
-    p_end_date      IN NUMBER,
+    p_patientid     IN NUMBER,
+    p_start_date    IN DATE,
+    p_end_date      IN DATE,
     p_result        OUT SYS_REFCURSOR
 ) AS
 BEGIN

@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE AddPrescription(
     p_doctorid      IN VARCHAR2,
     p_patientid     IN VARCHAR2,
-    p_date          IN NUMBER, -- Use appropriate date type if needed
+    p_date          IN DATE, -- Use appropriate date type if needed
     p_presc_id      OUT NUMBER
 ) AS
 BEGIN

@@ -8,7 +8,7 @@
 @procedures/addPharmacy.sql;
 @procedures/addPres.sql;
 @procedures/contractDetails.sql;
-@procedures/delPharmacy.sql;
+@procedures/delPharmaCompany.sql;
 @procedures/drugsbyCompany.sql;
 @procedures/fillPres.sql;
 @procedures/generateReport.sql;

@@ -6,8 +6,8 @@
 -- Patient Table
 CREATE TABLE Patient (
     AadharID NUMBER PRIMARY KEY,
-    Name VARCHAR2(100) NOT NULL,
-    Address VARCHAR2(200) NOT NULL,
+    Name VARCHAR2(100) ,--NOT NULL,
+    Address VARCHAR2(200) ,--NOT NULL,
     Age NUMBER(3) ,--CHECK (Age >= 0 AND Age <= 150),
     primary_doctor_ID NUMBER
     -- Foreign key to Doctor added in constraints.sql
@@ -32,7 +32,7 @@ CREATE TABLE Pharmacy (
 -- Pharmaceutical_Company Table
 CREATE TABLE Pharmaceutical_Company (
     Name VARCHAR2(100) PRIMARY KEY,
-    Phone VARCHAR2(15)
+    Phone INT
 );
 
 -- Drug Table
@@ -46,9 +46,9 @@ CREATE TABLE Drug (
 -- Prescription Table
 CREATE TABLE Prescription (
     PrescriptionID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    DoctorID VARCHAR2(12),
-    PatientID VARCHAR2(12),
-    Date_of_pres NUMBER 
+    DoctorID NUMBER(12),
+    PatientID NUMBER(12),
+    Date_of_pres DATE 
 );
 
 -- Prescription_Drug Table (for multiple drugs per prescription)
@@ -57,9 +57,9 @@ CREATE TABLE Prescription_Drug (
     Trade_Name VARCHAR2(100),
     Company_Name VARCHAR2(100),
     Quantity NUMBER CHECK (Quantity > 0),
-    PRIMARY KEY (PrescriptionID, Trade_Name, Company_Name),
-    FOREIGN KEY (PrescriptionID) REFERENCES Prescription(PrescriptionID),
-    FOREIGN KEY (Trade_Name, Company_Name) REFERENCES Drug(Trade_Name, Company_Name)
+    PRIMARY KEY (PrescriptionID, Trade_Name, Company_Name)
+    -- FOREIGN KEY (PrescriptionID) REFERENCES Prescription(PrescriptionID),
+    -- FOREIGN KEY (Trade_Name, Company_Name) REFERENCES Drug(Trade_Name, Company_Name)
 );
 
 -- Drug_Sale Table (for pharmacy-drug relationship with price)
@@ -75,7 +75,7 @@ CREATE TABLE Drug_Sale (
 CREATE TABLE Contract (
     Company_Name VARCHAR2(100),
     PharmacyID NUMBER,
-    Start_Date DATE DEFAULT SYSDATE,
+    Start_Date DATE,
     End_Date DATE,
     Contract_Content VARCHAR2(4000),
     Supervisor VARCHAR2(100),
