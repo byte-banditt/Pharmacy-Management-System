@@ -22,7 +22,7 @@ PatientListForDoctor(DoctorID)
 
 PrescriptionDetails(PatientID,Date_of_pres)
 
-StockPosition(PharmacyID)
+StockPosition(Pharmacy_name)
 
 DeletePharmaCompany(Company_Name)
 
