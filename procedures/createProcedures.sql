@@ -16,4 +16,5 @@
 @procedures/printPresWithDate.sql;
 @procedures/stock.sql;
 @procedures/addContract.sql
+@procedure/addDrugSale.sql
 
