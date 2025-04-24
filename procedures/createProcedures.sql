@@ -15,6 +15,8 @@
 @procedures/patientList.sql;
 @procedures/printPresWithDate.sql;
 @procedures/stock.sql;
-@procedures/addContract.sql
-@procedure/addDrugSale.sql
+@procedures/addContract.sql;
+@procedures/addDrugSale.sql;
+@procedures/updateExisting.sql;
+@procedures/contactDetails.sql;
 

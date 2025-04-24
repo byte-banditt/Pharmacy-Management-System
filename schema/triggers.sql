@@ -13,7 +13,7 @@ END;
 CREATE OR REPLACE TRIGGER trg_min_drugs_per_pharmacy
 AFTER DELETE OR UPDATE ON Drug_Sale
 DECLARE
-    v_pharmacy_id VARCHAR2(100);
+    v_pharmacy_id NUMBER;
     v_count       NUMBER;
 BEGIN
     FOR rec IN (
@@ -49,3 +49,14 @@ END;
 --     END IF;
 -- END;
 -- /
+
+-- Prevent Start_Date > End_Date for contract
+CREATE OR REPLACE TRIGGER trg_validate_contract_dates
+BEFORE INSERT OR UPDATE ON Contract
+FOR EACH ROW
+BEGIN
+    IF :NEW.End_Date < :NEW.Start_Date THEN
+        RAISE_APPLICATION_ERROR(-20015, 'End date cannot be earlier than start date.');
+    END IF;
+END;
+/
