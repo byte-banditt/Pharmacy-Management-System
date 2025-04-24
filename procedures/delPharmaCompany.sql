@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE DeletePharmaCompany(
+CREATE OR REPLACE PROCEDURE Delete_Pharma_Company(
     p_company IN VARCHAR2
 ) AS
 BEGIN

@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE PatientListForDoctor(
+CREATE OR REPLACE PROCEDURE Patient_List_For_Doctor(
     p_doctorid IN NUMBER
 ) AS
     v_count NUMBER := 0;

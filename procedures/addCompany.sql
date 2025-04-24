@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AddCompany(
+CREATE OR REPLACE PROCEDURE Add_Company(
     p_name      IN VARCHAR2,
     p_phone     IN VARCHAR2
 ) AS

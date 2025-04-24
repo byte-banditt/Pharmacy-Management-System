@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE ContractDetails(
+CREATE OR REPLACE PROCEDURE Contract_Details(
     p_pharmacy_id IN NUMBER,
     p_company_name  IN VARCHAR2
 ) AS

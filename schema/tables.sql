@@ -23,7 +23,7 @@ CREATE TABLE Doctor (
 
 -- Pharmacy Table
 CREATE TABLE Pharmacy (
-    PharmacyID NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- changed
+    PharmacyID NUMBER PRIMARY KEY, -- changed
     Name VARCHAR2(100),
     Address VARCHAR2(200) NOT NULL,
     Phone VARCHAR2(10),

@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AddPrescription(
+CREATE OR REPLACE PROCEDURE Add_Prescription(
     p_doctorid      IN VARCHAR2,
     p_patientid     IN VARCHAR2,
     p_date          IN DATE, -- Use appropriate date type if needed

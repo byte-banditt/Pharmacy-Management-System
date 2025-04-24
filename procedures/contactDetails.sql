@@ -1,5 +1,5 @@
 -- Contact Details of a Pharmacy-Pharmaceutical Company Contract
-CREATE OR REPLACE PROCEDURE ContactDetails(
+CREATE OR REPLACE PROCEDURE Contact_Details(
     p_pharmacy_id    IN VARCHAR2,
     p_company_name   IN VARCHAR2
 ) AS

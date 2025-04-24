@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AddPrescriptionDrug(
+CREATE OR REPLACE PROCEDURE Add_Prescription_Drug(
     p_prescriptionid    IN NUMBER,
     p_trade_name        IN VARCHAR2,
     p_company_name      IN VARCHAR2,

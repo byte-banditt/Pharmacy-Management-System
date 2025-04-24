@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AddDrug(
+CREATE OR REPLACE PROCEDURE Add_Drug(
     p_trade_name    IN VARCHAR2,
     p_company_name  IN VARCHAR2
 ) AS

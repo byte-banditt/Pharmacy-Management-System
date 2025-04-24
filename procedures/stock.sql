@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE StockPosition(
+CREATE OR REPLACE PROCEDURE Stock_Position(
     p_pharmacyid IN VARCHAR2
 ) AS
     v_count NUMBER := 0;

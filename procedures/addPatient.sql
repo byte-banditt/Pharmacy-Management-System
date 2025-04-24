@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AddPatient(
+CREATE OR REPLACE PROCEDURE Add_Patient(
     p_aadharid      IN NUMBER,
     p_name          IN VARCHAR2,
     p_address       IN VARCHAR2,

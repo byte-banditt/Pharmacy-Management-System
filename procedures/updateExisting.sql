@@ -1,7 +1,7 @@
 -- only for Pharmacy, Pharmaceutical_Company, Patient, Doctor, Contract
 
 -- Update Pharmacy
-CREATE OR REPLACE PROCEDURE UpdatePharmacy(
+CREATE OR REPLACE PROCEDURE Update_Pharmacy(
     p_old_name  IN VARCHAR2,
     p_new_name  IN VARCHAR2,
     p_address   IN VARCHAR2,

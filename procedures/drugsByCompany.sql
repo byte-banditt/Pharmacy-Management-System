@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE DrugsByCompany(
+CREATE OR REPLACE PROCEDURE Drugs_By_Company(
     p_company_name  IN VARCHAR2
     ) AS
 BEGIN

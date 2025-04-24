@@ -11,7 +11,7 @@
 --         WHERE pr.PatientID = p_patientid AND pr.Date_of_pres = p_date;
 -- END;
 -- /
-CREATE OR REPLACE PROCEDURE PrescriptionDetails(
+CREATE OR REPLACE PROCEDURE Prescription_Details(
     p_patientid IN NUMBER,
     p_date      IN DATE
 ) AS

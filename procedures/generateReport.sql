@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE PrescriptionsReport(
+CREATE OR REPLACE PROCEDURE Prescriptions_Report(
     p_patientid     IN NUMBER,
     p_start_date    IN DATE,
     p_end_date      IN DATE,
