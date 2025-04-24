@@ -16,12 +16,13 @@ ALTER TABLE Drug
 ALTER TABLE Prescription
     ADD CONSTRAINT prescription_doctorid_fk 
     FOREIGN KEY (DoctorID) REFERENCES Doctor(AadharID)
-    ON DELETE SET NULL;
+    ON DELETE SET NULL; -- set to Cascade?
+    -- no, prescription is for the patient. Record shouldn't be delted.
 
 ALTER TABLE Prescription
     ADD CONSTRAINT prescription_patientid_fk 
     FOREIGN KEY (PatientID) REFERENCES Patient(AadharID)
-    ON DELETE SET NULL;
+    ON DELETE CASCADE;
 
 -- Foreign keys for Prescription_Drug
 ALTER TABLE Prescription_Drug
@@ -34,12 +35,12 @@ ALTER TABLE Prescription_Drug
     ADD CONSTRAINT presdrug_drug_fk 
     FOREIGN KEY (Trade_Name, Company_Name) 
     REFERENCES Drug(Trade_Name, Company_Name)
-    ON DELETE CASCADE;
+    ON DELETE CASCADE; 
 
 -- Foreign keys for Drug_Sale
 ALTER TABLE Drug_Sale
     ADD CONSTRAINT drugsale_pharmacy_fk 
-    FOREIGN KEY (PharmacyID) REFERENCES Pharmacy(Name)
+    FOREIGN KEY (PharmacyID) REFERENCES Pharmacy(PharmacyID)
     ON DELETE CASCADE;
 
 ALTER TABLE Drug_Sale
@@ -58,7 +59,7 @@ ALTER TABLE Contract
 ALTER TABLE Contract
     ADD CONSTRAINT contract_pharmacy_fk 
     FOREIGN KEY (PharmacyID) 
-    REFERENCES Pharmacy(Name)
+    REFERENCES Pharmacy(PharmacyID)
     ON DELETE CASCADE;
 
 -- Unique constraint for latest prescription

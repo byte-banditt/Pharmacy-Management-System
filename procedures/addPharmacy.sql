@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE AddPharmacy(
     p_name      IN VARCHAR2,
     p_address   IN VARCHAR2,
-    p_phone     IN NUMBER
+    p_phone     IN VARCHAR2
 ) AS
 BEGIN
     INSERT INTO Pharmacy (Name, Address, Phone)

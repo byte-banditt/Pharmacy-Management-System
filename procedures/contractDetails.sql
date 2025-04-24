@@ -1,12 +1,12 @@
 CREATE OR REPLACE PROCEDURE ContractDetails(
-    p_pharmacy_name IN VARCHAR2,
+    p_pharmacy_id IN NUMBER,
     p_company_name  IN VARCHAR2
 ) AS
 BEGIN
     FOR rec IN (
         SELECT Start_Date, End_Date, Contract_Content, Supervisor
         FROM Contract
-        WHERE PharmacyID = p_pharmacy_name AND Company_Name = p_company_name
+        WHERE PharmacyID = p_pharmacy_id AND Company_Name = p_company_name
     ) LOOP
         DBMS_OUTPUT.PUT_LINE('----------------------------------------');
         DBMS_OUTPUT.PUT_LINE('Start Date: ' || TO_CHAR(rec.Start_Date, 'DD-MON-YYYY'));
